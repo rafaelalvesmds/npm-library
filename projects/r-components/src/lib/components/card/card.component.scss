@@ -1,0 +1,29 @@
+@import '../style.components.scss';
+
+.r-card {
+    background-color: rgb(235, 235, 235);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+}
+
+.r-card-hover {
+    &:hover {
+        background-color: rgb(200, 200, 200);
+        transition: var(--transition-background);
+    }
+
+    &:not(:hover) {
+        transition: var(--transition-background);
+    }
+}
+
+.r-card-active {
+    &:active {
+        background-color: rgb(180, 180, 180);
+        transition: var(--transition-background);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

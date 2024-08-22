@@ -1,0 +1,21 @@
+::ng-deep :root {
+    --primary-color: #007bff;
+    --primary-color-hover: #0051A8;
+    --primary-color-active: #00358b;
+
+    --secondary-color: rgb(163, 163, 163);
+    --secondary-color-hover: rgb(138, 138, 138);
+    --secondary-color-active: rgb(119, 119, 119);
+
+    --sucess-color: #34C759;
+    --sucess-color-hover: #28A745;
+    --sucess-color-active: #0d811e;
+
+    --warn-color: #FF3B30;
+    --warn-color-hover: #FF1A1A;
+    --warn-color-active: #bb1c16;
+
+    --transition-background: background-color 0.5s ease;
+
+    --border-radius: 0.5rem;
+}

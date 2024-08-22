@@ -1,0 +1,69 @@
+@import '../style.components.scss';
+
+.r-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    padding: 0.5rem;
+    color: #FFFFFF;
+    gap: 0.25rem;
+
+    border-radius: var(--border-radius);
+    transition: var(--transition-background);
+
+    &:hover {
+        transition: var(--transition-background);
+        cursor: pointer;
+    }
+}
+
+.r-button-label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.r-button-icon {
+    font-size: 1.4rem;
+}
+
+.r-button-primary {
+    background-color: var(--primary-color);
+    &:hover {
+        background-color: var(--primary-color-hover);
+    }
+    &:active {
+        background-color: var(--primary-color-active);
+    }
+}
+
+.r-button-secondary {
+    background-color: var(--secondary-color);
+    &:hover {
+        background-color: var(--secondary-color-hover);
+    }
+    &:active {
+        background-color: var(--secondary-color-active);
+    }
+}
+
+.r-button-sucess {
+    background-color: var(--sucess-color);
+    &:hover {
+        background-color: var(--sucess-color-hover);
+    }
+    &:active {
+        background-color: var(--sucess-color-active);
+    }
+}
+
+.r-button-warn {
+    background-color: var(--warn-color);
+    &:hover {
+        background-color: var(--warn-color-hover);
+    }
+    &:active {
+        background-color: var(--warn-color-active);
+    }
+}

@@ -2,24 +2,29 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  },
   "projects": {
-    "rafa-componenents": {
+    "r-components": {
       "projectType": "library",
-      "root": "projects/rafa-componenents",
-      "sourceRoot": "projects/rafa-componenents/src",
-      "prefix": "lib",
+      "root": "projects/r-components",
+      "sourceRoot": "projects/r-components/src",
+      "prefix": "r",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/rafa-componenents/ng-package.json"
+            "project": "projects/r-components/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/rafa-componenents/tsconfig.lib.prod.json"
+              "tsConfig": "projects/r-components/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/rafa-componenents/tsconfig.lib.json"
+              "tsConfig": "projects/r-components/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,11 +32,111 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/rafa-componenents/tsconfig.spec.json",
+            "tsConfig": "projects/r-components/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"
             ]
+          }
+        }
+      }
+    },
+    "r-components-layout": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/r-components-layout",
+      "sourceRoot": "projects/r-components-layout/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/r-components-layout",
+            "index": "projects/r-components-layout/src/index.html",
+            "browser": "projects/r-components-layout/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/r-components-layout/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/r-components-layout/public"
+              }
+            ],
+            "styles": [
+              "projects/r-components-layout/src/styles.scss"
+            ],
+            "scripts": [],
+            "server": "projects/r-components-layout/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/r-components-layout/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "r-components-layout:build:production"
+            },
+            "development": {
+              "buildTarget": "r-components-layout:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/r-components-layout/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/r-components-layout/public"
+              }
+            ],
+            "styles": [
+              "projects/r-components-layout/src/styles.scss"
+            ],
+            "scripts": []
           }
         }
       }

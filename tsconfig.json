@@ -16,8 +16,8 @@
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
     "paths": {
-      "rafa-componenents": [
-        "./dist/rafa-componenents"
+      "r-components": [
+        "./dist/r-components"
       ]
     },
     "importHelpers": true,

@@ -1,0 +1,11 @@
+<button class="r-button r-button-{{severity()}}" (click)="click($event)">
+
+  @if(label()) {
+  <span class="r-button-label">{{ label() }}</span>
+  }
+
+   @if(icon()) {
+  <span class="material-symbols-outlined r-button-icon"> {{ icon() }} </span>
+  }
+
+</button>
