@@ -13,6 +13,8 @@ export class RButtonComponent {
   label = input<string>('')
   icon = input<string>('')
   severity = input<string>('primary')
+  selected = input<boolean>(false)
+
   onClick = output<Event>();
 
   click(e: Event) {

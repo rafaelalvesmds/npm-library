@@ -17,18 +17,24 @@
     flex-direction: row;
     height: 100%;
     width: 100%;
-
     background-color: gray;
-
 }
 
 .sidebar {
+    width: 20%;
+    min-width: 70px;
     background-color: green;
     margin: 0.5rem;
     border-radius: var(--border-radius);
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
 }
 
 .page-content {
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0;
     width: 100%;
 }

@@ -1,11 +1,16 @@
-<button class="r-button r-button-{{severity()}}" (click)="click($event)">
-
-  @if(label()) {
+<button
+  class="r-button r-button-{{ severity() }}"
+  [ngStyle]="{ backgroundColor: selected() ? 'var(--primary-color-active)' : '' }"
+  (click)="click($event)"
+>
+  @if(icon()) {
+  <span
+    class="material-symbols-outlined r-button-icon"
+    [ngStyle]="{ width: label() ? 'auto' : '100%' }"
+  >
+    {{ icon() }}
+  </span>
+  } @if(label()) {
   <span class="r-button-label">{{ label() }}</span>
   }
-
-   @if(icon()) {
-  <span class="material-symbols-outlined r-button-icon"> {{ icon() }} </span>
-  }
-
 </button>
