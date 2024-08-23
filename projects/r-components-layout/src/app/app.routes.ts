@@ -4,7 +4,8 @@ import { ButtonComponent } from './features/button/button.component';
 import { HomeComponent } from './features/home/home.component';
 
 export const routes: Routes = [
-    { path: 'card', component: CardComponent },
+    {path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent },
+    { path: 'card', component: CardComponent },
     { path: 'button', component: ButtonComponent }
 ];

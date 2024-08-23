@@ -1,0 +1,13 @@
+.code-content {
+    padding: 0.875rem;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.icon {
+    font-size: 20px;
+    transition: color 0.5s ease;
+}
+

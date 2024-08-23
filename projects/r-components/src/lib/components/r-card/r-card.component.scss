@@ -2,10 +2,9 @@
 
 .r-card {
     box-shadow: 0 0 8px 1px rgba(90, 90, 90, 0.25);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px);
     border-radius: var(--border-radius);
     height: 100%;
-    width: 100%;
     overflow-y: auto;
 }
 
@@ -32,7 +31,7 @@
 }
 
 .r-card-white {
-    background-color: white;
+    background-color: rgb(250, 250, 250, 0.70);
 }
 
 .r-card-gray {

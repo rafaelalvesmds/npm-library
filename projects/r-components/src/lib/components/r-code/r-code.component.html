@@ -1,0 +1,13 @@
+<div class="code-container" id="code-container" [style.width]="width()">
+  <r-card [clickable]="true" [hoverEffect]="true" (onClick)="copyCode()">
+    <div class="code-content copy-field">
+      <pre class="copy-field">{{ code() }}</pre>
+      <span
+        class="material-symbols-outlined icon copy-field"
+        [style.color]="copied() ? 'var(--primary-color)' : 'black'"
+      >
+        file_copy
+      </span>
+    </div>
+  </r-card>
+</div>

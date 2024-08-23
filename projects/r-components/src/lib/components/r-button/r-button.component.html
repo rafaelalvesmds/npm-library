@@ -10,7 +10,14 @@
   >
     {{ icon() }}
   </span>
-  } @if(label()) {
-  <span class="r-button-label">{{ label() }}</span>
+  } 
+  
+  @if(label()) {
+  <span
+    class="r-button-label"
+    [ngStyle]="{ marginRight: icon() ? '0.5rem' : '' }"
+    >{{ label() }}</span
+  >
   }
+
 </button>

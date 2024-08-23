@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'r-card',
@@ -11,6 +11,12 @@ import { Component, input } from '@angular/core';
 export class RCardComponent {
 
   clickable = input<boolean>(false);
-  houverEffect = input<boolean>(false);
+  hoverEffect = input<boolean>(false);
   bgColor = input<'white' | 'gray'>('white');
+
+  onClick = output<Event>();
+
+  click(e: Event) {
+    this.onClick.emit(e);
+  }
 }

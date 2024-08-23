@@ -1,6 +1,7 @@
 <div
   class="r-card r-card-{{ bgColor() }}"
-  [ngClass]="{ 'r-card-hover': houverEffect(), 'r-card-active': clickable() }"
+  [ngClass]="{ 'r-card-hover': hoverEffect(), 'r-card-active': clickable() }"
+  (click)="click($event)"
 >
   <ng-content></ng-content>
 </div>
