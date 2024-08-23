@@ -1,14 +1,17 @@
 @import '../style.components.scss';
 
 .r-card {
-    background-color: rgb(235, 235, 235);
+    box-shadow: 0 0 8px 1px rgba(90, 90, 90, 0.25);
+    backdrop-filter: blur(15px);
     border-radius: var(--border-radius);
-    padding: 1rem;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
 }
 
 .r-card-hover {
     &:hover {
-        background-color: rgb(200, 200, 200);
+        background-color: rgb(200, 200, 200, 0.45);
         transition: var(--transition-background);
     }
 
@@ -19,11 +22,19 @@
 
 .r-card-active {
     &:active {
-        background-color: rgb(180, 180, 180);
+        background-color: rgb(180, 180, 180, 0.45);
         transition: var(--transition-background);
     }
 
     &:hover {
         cursor: pointer;
     }
+}
+
+.r-card-white {
+    background-color: white;
+}
+
+.r-card-gray {
+    background-color: rgba(235, 235, 235, 0.45);
 }

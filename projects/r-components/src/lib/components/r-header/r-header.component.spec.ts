@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RButtonComponent } from './button.component';
 
-describe('RButtonComponent', () => {
-  let component: RButtonComponent;
-  let fixture: ComponentFixture<RButtonComponent>;
+import { RHeaderComponent } from './r-header.component';
+
+describe('RHeaderComponent', () => {
+  let component: RHeaderComponent;
+  let fixture: ComponentFixture<RHeaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RButtonComponent]
+      imports: [RHeaderComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RButtonComponent);
+    fixture = TestBed.createComponent(RHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

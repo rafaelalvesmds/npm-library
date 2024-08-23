@@ -12,7 +12,7 @@
       "projectType": "library",
       "root": "projects/r-components",
       "sourceRoot": "projects/r-components/src",
-      "prefix": "r",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

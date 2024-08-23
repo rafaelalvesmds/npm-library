@@ -5,8 +5,8 @@ import { Component, input, output } from '@angular/core';
   selector: 'r-button',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './button.component.html',
-  styleUrl: './button.component.scss'
+  templateUrl: './r-button.component.html',
+  styleUrl: './r-button.component.scss'
 })
 export class RButtonComponent {
 

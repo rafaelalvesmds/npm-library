@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RCardComponent } from '../../../../../r-components/src/lib/components/card/card.component';
+import { RCardComponent } from '../../../../../r-components/src/lib/components/r-card/r-card.component';
 
 @Component({
   selector: 'app-card',

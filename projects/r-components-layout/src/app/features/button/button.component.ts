@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RButtonComponent } from "../../../../../r-components/src/lib/components/button/button.component";
+import { RButtonComponent } from "../../../../../r-components/src/lib/components/r-button/r-button.component";
 
 @Component({
   selector: 'app-button',

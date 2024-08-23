@@ -5,11 +5,12 @@ import { Component, input } from '@angular/core';
   selector: 'r-card',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss', '../style.components.scss']
+  templateUrl: './r-card.component.html',
+  styleUrl: './r-card.component.scss'
 })
 export class RCardComponent {
 
-  clickable = input<boolean>(true);
-  houverEffect = input<boolean>(true);
+  clickable = input<boolean>(false);
+  houverEffect = input<boolean>(false);
+  bgColor = input<'white' | 'gray'>('white');
 }

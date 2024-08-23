@@ -1,0 +1,34 @@
+@import '../style.components.scss';
+
+.r-layout {
+    background-color: white;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: blue;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+
+    background-color: gray;
+
+}
+
+.sidebar {
+    background-color: green;
+    margin: 0.5rem;
+    border-radius: var(--border-radius);
+}
+
+.page-content {
+    padding: 0.5rem;
+    width: 100%;
+}
