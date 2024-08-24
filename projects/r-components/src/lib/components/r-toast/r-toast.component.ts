@@ -47,11 +47,11 @@ export class RToastComponent {
   showToast(): void {
     const toastDiv = document.getElementById('toast');
     if (toastDiv) {
-      toastDiv.classList.add('show'); // Adiciona a classe 'show' para exibir o toast
+      toastDiv.classList.add('show'); 
 
       this.toastTimer$ = timer(3000).subscribe(() => {
-        toastDiv.classList.remove('show'); // Remove a classe 'show' para iniciar a animação de fechamento
-        toastDiv.classList.add('hide'); // Adiciona a classe 'hide' para esconder o toast
+        toastDiv.classList.remove('show'); 
+        toastDiv.classList.add('hide');
       });
     }
   }

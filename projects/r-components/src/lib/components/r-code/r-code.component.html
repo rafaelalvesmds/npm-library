@@ -1,10 +1,22 @@
-<div class="code-container" id="code-container" [style.width]="width()" [style.maxWidth]="maxWidth()">
-  <r-card [clickable]="true" [hoverEffect]="true" (onClick)="copyCode()">
+<div
+  class="code-container"
+  id="code-container"
+  [style.width]="width()"
+  [style.maxWidth]="maxWidth()"
+>
+  <r-card
+    [clickable]="true"
+    [hoverEffect]="true"
+    [bgColor]="'#2d2d2d'"
+    (onClick)="copyCode()"
+  >
     <div class="code-content copy-field">
-      <pre class="copy-field code">{{ code() }}</pre>
+        <code class="language-typescript code copy-field">
+          {{ code() }}
+        </code>
       <span
         class="material-symbols-outlined icon copy-field"
-        [style.color]="copied() ? 'var(--primary-color)' : 'black'"
+        [style.color]="copied() ? 'var(--primary-color)' : 'white'"
       >
         file_copy
       </span>

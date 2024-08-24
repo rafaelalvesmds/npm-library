@@ -1,26 +1,38 @@
 <div class="page-container">
+  <div class="section-header">
+    <h2>Button</h2>
+    <p>
+      Button is an extension of the standard button element, providing support
+      for icons and theme customization.
+    </p>
+  </div>
+
+  <div class="section-import">
+    <h3>Import</h3>
+    <r-code [code]="importPath"></r-code>
+  </div>
 
   @for (button of buttonGroups; track $index) {
-    <div class="section">
-      <h2 class="title-card">{{ button.title }}</h2>
-      <div class="card-btns">
-        @for (btn of button.buttons; track $index) {
-          <r-button
-            [label]="btn.label"
-            [icon]="btn.icon"
-            [severity]="btn.severity"
-            (onClick)="onClick( button.title, btn.severity )"
-          />
-        }
-      </div>
-      <r-code [code]="button.code" maxWidth="550px"></r-code>
+  <div class="section">
+    <h3 class="title-card">{{ button.title }}</h3>
+    <div class="card-btns">
+      @for (btn of button.buttons; track $index) {
+      <r-button
+        [label]="btn.label"
+        [icon]="btn.icon"
+        [severity]="btn.severity"
+        (onClick)="onClick(button.title, btn.severity)"
+      />
+      }
     </div>
+    <r-code [code]="button.code"></r-code>
+  </div>
   }
-
 </div>
 
-
-<r-toast *ngIf="toastService.toast$ | async as toast"
-         [message]="toast.message"
-         [type]="toast.type">
+<r-toast
+  *ngIf="toastService.toast$ | async as toast"
+  [message]="toast.message"
+  [type]="toast.type"
+>
 </r-toast>

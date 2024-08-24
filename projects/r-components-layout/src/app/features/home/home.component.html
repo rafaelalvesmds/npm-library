@@ -1,13 +1,13 @@
 <div class="page-container">
-  <h2 class="tile-page">
-    r-components is a open source native Angular UI components.
+  <h2 class="title-page">
+    R-components is a open source native Angular UI components.
   </h2>
 
-  @for(section of sections(); track $index) {
+  @for(section of sections; track $index) {
     <div class="section">
       <h3>{{ section.title }}</h3>
       <p>{{ section.description }}</p>
-      <r-code [code]="section.code" width="400px"></r-code>
+      <r-code [code]="section.code"></r-code>
     </div>
   }
 

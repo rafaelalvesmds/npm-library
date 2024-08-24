@@ -1,21 +1,18 @@
-<div style="padding: 0.5rem">
-  <r-card>
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
-    <span>card works!</span><br /><br /><br />
+<div class="page-container">
+  <h2 class="title-page">Card</h2>
+
+  <h3 class="title-card"> Simple card </h3>
+  <r-card> <div class="insivible-content"></div> </r-card>
+
+  <r-card [clickable]="true">
+    <div class="insivible-content"></div>
+  </r-card>
+
+  <r-card [hoverEffect]="true">
+    <div class="insivible-content"></div>
+  </r-card>
+
+  <r-card [clickable]="true" [hoverEffect]="true">
+    <div class="insivible-content"></div>
   </r-card>
 </div>

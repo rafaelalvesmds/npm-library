@@ -6,6 +6,16 @@
     gap: 1rem;
 }
 
+.section-header {
+    margin-bottom: 1rem;
+}
+
+.section-import {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .card-btns {
     width: 100%;
     display: flex;

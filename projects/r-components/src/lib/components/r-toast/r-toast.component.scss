@@ -26,22 +26,23 @@
     from {
         top: -100px;
     }
+
     to {
         top: 20px;
     }
 }
 
 .success {
-    background-color: #d4edda; /* Verde claro suave */
-    border: 0.5px solid #28a745; /* Verde mais forte para o borda */
+    background-color: #d4edda;
+    border: 0.5px solid #28a745;
 }
 
 .error {
-    background-color: #f8d7da; /* Vermelho suave */
-    border: 0.5px solid #dc3545; /* Vermelho mais forte para o borda */
+    background-color: #f8d7da;
+    border: 0.5px solid #dc3545;
 }
 
 .info {
-    background-color: #d1ecf1; /* Azul claro suave */
-    border: 0.5px solid var(--primary-color); /* Azul mais forte para o borda */
+    background-color: #d1ecf1;
+    border: 0.5px solid var(--primary-color);
 }

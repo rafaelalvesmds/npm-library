@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostListener, input, signal } from '@angular/core';
 import { RCardComponent } from "../r-card/r-card.component";
 import { CommonModule } from '@angular/common';
+import Prism from 'prismjs';
 
 @Component({
   selector: 'r-code',
@@ -15,6 +16,17 @@ export class RCodeComponent {
   maxWidth = input<string>('');
 
   copied = signal<boolean>(false);
+
+  ngOnInit() {
+    const preElements = document.querySelectorAll('code');
+    console.log(preElements, 'preElements');
+    preElements.forEach((block) => {
+      block.classList.add('language-typescript');
+      console.log(block.classList, 'block.classList');
+    });
+
+    Prism
+  }
 
   @HostListener('document:click', ['$event'])
   clickOut(event: MouseEvent) {

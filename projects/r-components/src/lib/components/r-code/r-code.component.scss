@@ -11,6 +11,8 @@
     transition: color 0.5s ease;
 }
 
-.code {
-    white-space: pre-line;
+@media screen and (max-width: 768px) {
+    .code {
+        font-size: 10px;
+    }
 }

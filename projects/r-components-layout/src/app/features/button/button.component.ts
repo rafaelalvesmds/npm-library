@@ -17,6 +17,7 @@ import { CommonModule } from '@angular/common';
 export class ButtonComponent {
 
   buttonGroups = buttonGroups;
+  importPath = "import { RButtonComponent } from \'r-components\';";
 
   toastService = inject(ToastService);
 

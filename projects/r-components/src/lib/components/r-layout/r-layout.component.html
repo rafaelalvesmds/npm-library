@@ -3,7 +3,7 @@
     <div class="sidebar">
       @for (menu of menuItems(); track $index) {
       <r-button
-        [label]="pageWidth() > 700 && menu.label"
+        [label]="pageWidth() > 768 && menu.label"
         [icon]="menu.icon"
         [routerLink]="menu.routerLink"
         [selected]="currentRoute().includes(menu.routerLink)"
@@ -11,7 +11,7 @@
       }
     </div>
 
-    <r-card class="page-content" >
+    <r-card class="page-content" [bgColor]="'var(--gray-color-card)'">
       <router-outlet />
     </r-card>
   </div>
