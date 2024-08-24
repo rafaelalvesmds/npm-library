@@ -1,6 +1,6 @@
 <div
-  class="r-card"
-  [style.backgroundColor]="bgColor()"
+  class="r-card {{!bgColor() && 'r-card-hover'}}"
+  [style.backgroundColor]="bgColor() && bgColor()"
   [ngClass]="{ 'r-card-hover': hoverEffect(), 'r-card-active': clickable() }"
   (click)="click($event)"
 >

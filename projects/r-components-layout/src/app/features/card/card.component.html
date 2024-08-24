@@ -1,18 +1,17 @@
-<div class="page-container">
-  <h2 class="title-page">Card</h2>
-
-  <h3 class="title-card"> Simple card </h3>
-  <r-card> <div class="insivible-content"></div> </r-card>
-
-  <r-card [clickable]="true">
-    <div class="insivible-content"></div>
+<app-documentation-page
+  [importPath]="importPath"
+  [componentName]="'Card'"
+  [description]="description"
+>
+  @for (card of cardGroups; track $index) {
+  <r-card>
+    <div class="section">
+      <h3 class="title-card">{{ card.title }}</h3>
+      <r-card [clickable]="card.clickable" [hoverEffect]="card.hoverEffect">
+        <div class="insivible-content"></div>
+      </r-card>
+      <r-code [code]="card.code"></r-code>
+    </div>
   </r-card>
-
-  <r-card [hoverEffect]="true">
-    <div class="insivible-content"></div>
-  </r-card>
-
-  <r-card [clickable]="true" [hoverEffect]="true">
-    <div class="insivible-content"></div>
-  </r-card>
-</div>
+  }
+</app-documentation-page>

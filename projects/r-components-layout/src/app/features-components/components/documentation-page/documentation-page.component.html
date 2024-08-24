@@ -1,0 +1,22 @@
+<div class="page-container">
+  <div class="section-header">
+    <h2>{{ componentName() }}</h2>
+    <p>
+      {{ description() }}
+    </p>
+  </div>
+
+  <div class="section-import">
+    <h3>Import</h3>
+    <r-code [code]="importPath()"></r-code>
+  </div>
+
+  <ng-content></ng-content>
+</div>
+
+<r-toast
+  *ngIf="toastService.toast$ | async as toast"
+  [message]="toast.message"
+  [type]="toast.type"
+>
+</r-toast>

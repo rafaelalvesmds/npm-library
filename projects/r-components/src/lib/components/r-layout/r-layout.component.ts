@@ -3,11 +3,13 @@ import { NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/rout
 import { RCardComponent } from '../r-card/r-card.component';
 import { RButtonComponent } from "../r-button/r-button.component";
 import { filter } from 'rxjs';
+import { RToastComponent } from '../r-toast/r-toast.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'r-layout',
   standalone: true,
-  imports: [RouterOutlet, RouterModule, RCardComponent, RButtonComponent],
+  imports: [CommonModule ,RouterOutlet, RouterModule, RCardComponent, RButtonComponent, RToastComponent],
   templateUrl: './r-layout.component.html',
   styleUrl: './r-layout.component.scss'
 })

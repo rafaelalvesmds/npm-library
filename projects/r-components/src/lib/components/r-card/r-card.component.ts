@@ -12,7 +12,7 @@ export class RCardComponent {
 
   clickable = input<boolean>(false);
   hoverEffect = input<boolean>(false);
-  bgColor = input<string>('var(--white-color-card)');
+  bgColor = input<string>('');
 
   onClick = output<Event>();
 

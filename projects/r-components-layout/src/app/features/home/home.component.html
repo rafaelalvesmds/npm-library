@@ -4,11 +4,12 @@
   </h2>
 
   @for(section of sections; track $index) {
+  <r-card>
     <div class="section">
       <h3>{{ section.title }}</h3>
       <p>{{ section.description }}</p>
       <r-code [code]="section.code"></r-code>
     </div>
+  </r-card>
   }
-
 </div>
