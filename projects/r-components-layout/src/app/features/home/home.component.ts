@@ -3,11 +3,12 @@ import { RCardComponent } from "../../../../../r-components/src/lib/components/r
 import { RCodeComponent } from "../../../../../r-components/src/lib/components/r-code/r-code.component";
 import { SectionModel } from '../../features-components/models/section-model';
 import { sections } from './home.data';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RCardComponent, RCodeComponent],
+  imports: [CommonModule, RCardComponent, RCodeComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

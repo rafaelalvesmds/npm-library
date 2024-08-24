@@ -8,9 +8,9 @@ export const buttonGroups: any = [
       { label: "Warn", severity: "warn" }
     ],
     code: `<r-button label="Primary" />
-<r-button severity="secondary" label="Secondary" />
-<r-button severity="sucess" label="Sucess" />
-<r-button severity="warn" label="Warn" />`
+ <r-button severity="secondary" label="Secondary" />
+ <r-button severity="sucess" label="Sucess" />
+ <r-button severity="warn" label="Warn" />`
   },
   {
     title: "Icon buttons",
@@ -21,9 +21,9 @@ export const buttonGroups: any = [
       { icon: "close", severity: "warn" }
     ],
     code: `<r-button icon="home" />
-<r-button severity="secondary" icon="search" />
-<r-button severity="sucess" icon="check" />
-<r-button severity="warn" icon="close" />`
+ <r-button severity="secondary" icon="search" />
+ <r-button severity="sucess" icon="check" />
+ <r-button severity="warn" icon="close" />`
   },
   {
     title: "Label + Icon buttons",
@@ -34,8 +34,8 @@ export const buttonGroups: any = [
       { label: "Warn", icon: "close", severity: "warn" }
     ],
     code: `<r-button label="Primary" icon="home" />
-<r-button severity="secondary" label="Secondary" icon="search" />
-<r-button severity="sucess" label="Sucess" icon="check" />
-<r-button severity="warn" label="Warn" icon="close" />`
+ <r-button severity="secondary" label="Secondary" icon="search" />
+ <r-button severity="sucess" label="Sucess" icon="check" />
+ <r-button severity="warn" label="Warn" icon="close" />`
   },
 ];

@@ -70,13 +70,9 @@
               }
             ],
             "styles": [
-              "projects/r-components-layout/src/styles.scss",
-              "./node_modules/prismjs/themes/prism-tomorrow.css"
+              "projects/r-components-layout/src/styles.scss"
             ],
-            "scripts": [
-              "./node_modules/prismjs/prism.js",
-              "./node_modules/prismjs/components/prism-typescript.min.js"
-            ],
+            "scripts": [],
             "server": "projects/r-components-layout/src/main.server.ts",
             "prerender": true,
             "ssr": {
