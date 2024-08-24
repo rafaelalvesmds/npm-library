@@ -1,10 +1,14 @@
-<div style="padding: 0.5rem">
-  <h2>Instalation:</h2>
-  <span>r-components is a open source native Angular UI components.</span>
+<div class="page-container">
+  <h2 class="tile-page">
+    r-components is a open source native Angular UI components.
+  </h2>
 
-  <br />
-  <br />
-
-  <r-code [code]="'npm install r-components'" width="300px"></r-code>
+  @for(section of sections(); track $index) {
+    <div class="section">
+      <h3>{{ section.title }}</h3>
+      <p>{{ section.description }}</p>
+      <r-code [code]="section.code" width="400px"></r-code>
+    </div>
+  }
 
 </div>

@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 export class RCodeComponent {
   code = input<string>('');
   width = input<string>('');
+  maxWidth = input<string>('');
 
   copied = signal<boolean>(false);
 

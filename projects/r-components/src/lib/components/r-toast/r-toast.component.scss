@@ -1,0 +1,47 @@
+@import '../style.components.scss';
+
+.toast {
+    position: fixed;
+    right: 20px;
+    border-radius: var(--border-radius);
+    z-index: 1000;
+    padding: 1rem;
+    min-width: 250px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+
+    top: -100px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.toast.show {
+    animation: slideDown 0.5s ease-in-out forwards;
+    opacity: 1;
+}
+
+@keyframes slideDown {
+    from {
+        top: -100px;
+    }
+    to {
+        top: 20px;
+    }
+}
+
+.success {
+    background-color: #d4edda; /* Verde claro suave */
+    border: 0.5px solid #28a745; /* Verde mais forte para o borda */
+}
+
+.error {
+    background-color: #f8d7da; /* Vermelho suave */
+    border: 0.5px solid #dc3545; /* Vermelho mais forte para o borda */
+}
+
+.info {
+    background-color: #d1ecf1; /* Azul claro suave */
+    border: 0.5px solid var(--primary-color); /* Azul mais forte para o borda */
+}

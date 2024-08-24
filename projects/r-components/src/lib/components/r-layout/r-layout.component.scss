@@ -17,15 +17,18 @@
     flex-direction: row;
     height: 100%;
     width: 100%;
-    background-image: url('https://bucket-rafa.s3.amazonaws.com/mixed-ocean-11-07-24.png');
 
+    background: #1A2980;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 
 .sidebar {
-    width: 20%;
-    min-width: 60px;
+    width: 15%;
+    min-width: 50px;
     backdrop-filter: blur(5px);
-    background-color: rgb(250, 250, 250, 0.70);
+    background-color: rgb(250, 250, 250, 0.50);
 
     margin: 1rem;
     border-radius: var(--border-radius);

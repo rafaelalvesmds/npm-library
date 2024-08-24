@@ -1,30 +1,26 @@
 <div class="page-container">
-  <h2 class="title-card">Label buttons</h2>
-  <div class="card-btns">
-    <r-button label="Primary" />
-    <r-button severity="secondary" label="Secondary" />
-    <r-button severity="sucess" label="Sucess" />
-    <r-button severity="warn" label="Warn" />
-  </div>
-  <r-code [code]="codeButtonLabel" width="520px"></r-code>
 
-
-  <h2 class="title-card">Icon buttons</h2>
-  <div class="card-btns">
-    <r-button icon="home" />
-    <r-button severity="secondary" icon="search" />
-    <r-button severity="sucess" icon="check" />
-    <r-button severity="warn" icon="close" />
-  </div>
-  <r-code [code]="codeButtonIcon" width="520px"></r-code>
-
-  <h2 class="title-card">Label + Icon buttons</h2>
-  <div class="card-btns">
-    <r-button label="Primary" icon="home" />
-    <r-button severity="secondary" label="Secondary" icon="search" />
-    <r-button severity="sucess" label="Sucess" icon="check" />
-    <r-button severity="warn" label="Warn" icon="close" />
-  </div>
-  <r-code [code]="codeButtonLabelIcon" width="520px"></r-code>
+  @for (button of buttonGroups; track $index) {
+    <div class="section">
+      <h2 class="title-card">{{ button.title }}</h2>
+      <div class="card-btns">
+        @for (btn of button.buttons; track $index) {
+          <r-button
+            [label]="btn.label"
+            [icon]="btn.icon"
+            [severity]="btn.severity"
+            (onClick)="onClick( button.title, btn.severity )"
+          />
+        }
+      </div>
+      <r-code [code]="button.code" maxWidth="550px"></r-code>
+    </div>
+  }
 
 </div>
+
+
+<r-toast *ngIf="toastService.toast$ | async as toast"
+         [message]="toast.message"
+         [type]="toast.type">
+</r-toast>

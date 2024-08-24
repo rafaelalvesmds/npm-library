@@ -1,7 +1,7 @@
-<div class="code-container" id="code-container" [style.width]="width()">
+<div class="code-container" id="code-container" [style.width]="width()" [style.maxWidth]="maxWidth()">
   <r-card [clickable]="true" [hoverEffect]="true" (onClick)="copyCode()">
     <div class="code-content copy-field">
-      <pre class="copy-field">{{ code() }}</pre>
+      <pre class="copy-field code">{{ code() }}</pre>
       <span
         class="material-symbols-outlined icon copy-field"
         [style.color]="copied() ? 'var(--primary-color)' : 'black'"
